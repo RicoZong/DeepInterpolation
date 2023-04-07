@@ -1,0 +1,40 @@
+#read Raw image ROI into R dataframe 
+raw_ROI <- read.csv("./Raw_ROI.csv")
+Denoised_ROI <- read.csv("./Model_A_ROI.csv")
+
+#Select all StdDev columns 
+raw_ROI <- raw_ROI[, seq(4, ncol(raw_ROI), 5)]
+Denoised_ROI <- Denoised_ROI[, seq(4, ncol(Denoised_ROI), 5)]
+
+#Plot the two image set ROI 
+par(mfrow = c(5,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev1, type = "l", col =1, main = "Raw VS Denoised ROI1 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev1, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev2, type = "l", col =1, main = "Raw VS Denoised ROI2 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev2, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev3, type = "l", col =1, main = "Raw VS Denoised ROI3 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev3, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev4, type = "l", col =1, main = "Raw VS Denoised ROI4 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev4, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev5, type = "l", col =1, main = "Raw VS Denoised ROI5 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev5, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev6, type = "l", col =1, main = "Raw VS Denoised ROI6 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev6, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev7, type = "l", col =1, main = "Raw VS Denoised ROI7 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev7, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev8, type = "l", col =1, main = "Raw VS Denoised ROI8 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev8, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev9, type = "l", col =1, main = "Raw VS Denoised ROI9 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev9, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
+plot(rownames(raw_ROI), raw_ROI$StdDev10, type = "l", col =1, main = "Raw VS Denoised ROI10 StdDEV", xlab = "Frames", ylab = "StdDEV", lwd = 0.5 )
+lines(rownames(Denoised_ROI), Denoised_ROI$StdDev10, type = "l", col =2)
+legend(x = "topright", legend = c("Raw", "Denoised"),lty = c(1, 1), col = c(1,2))
